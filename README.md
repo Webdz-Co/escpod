@@ -1,10 +1,8 @@
-# mxb.dev
+# escapethepod.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/57999461-2350-4da3-8788-ca4e0e6dcb30/deploy-status)](https://app.netlify.com/sites/mxb/deploys)  
+Source code for [Escape The Pod](https://www.escapethepod.com).  
 
-Source code for [mxb.dev](https://mxb.dev), my personal website.  
-
-This version is built with [Eleventy](https://www.11ty.io). If you're looking for the previous Jekyll-based site, that repo has moved to [https://github.com/maxboeck/mxb-jekyll](https://github.com/maxboeck/mxb-jekyll)
+This version is built with [Eleventy](https://www.11ty.io) and based off of code from [mxb.dev](https://github.com/maxboeck/mxb/).
 
 ## Features
 
