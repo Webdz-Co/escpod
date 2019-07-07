@@ -3,6 +3,7 @@
     "description": "Entrepreneur Success Community",
     "lang": "en",
     "locale": "en_US",
+    "domain": "escapethepod.com"
     "url": "https://www.escapethepod.com",
     "repo": "https://github.com/Webdz-Co/escpod"
 }

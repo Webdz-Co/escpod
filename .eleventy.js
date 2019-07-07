@@ -26,16 +26,17 @@ module.exports = function(config) {
     config.addPlugin(pluginSyntaxHighlight)
 
     // Layouts
-    config.addLayoutAlias('base', 'layouts/base.njk')
-    config.addLayoutAlias('page', 'layouts/page.njk')
-    config.addLayoutAlias('post', 'layouts/post.njk')
-    config.addLayoutAlias('note', 'layouts/note.njk')
+    config.addLayoutAlias('base', 'base.njk')
+    config.addLayoutAlias('page', 'page.njk')
+    config.addLayoutAlias('post', 'post.njk')
+    config.addLayoutAlias('note', 'note.njk')
 
     // Pass-through files
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/keybase.txt')
     config.addPassthroughCopy('src/robots.txt')
-    config.addPassthroughCopy('admin')
+    config.addPassthroughCopy('src/assets/images')
+    config.addPassthroughCopy('src/assets/fonts')
 
     // Markdown Parsing
     config.setLibrary(
@@ -48,6 +49,7 @@ module.exports = function(config) {
             permalink: true,
             permalinkSymbol: '#',
             permalinkClass: 'heading-anchor',
+            permalinkBefore: true,
             level: 2,
             slugify: s =>
                 encodeURIComponent(
@@ -98,7 +100,8 @@ module.exports = function(config) {
         return content
     })
 
-    // opt out of using gitignore for eleventy
+    // opt out of using gitignore for eleventy,
+    // because the drafts folder is ignored, but should still be processed.
     config.setUseGitIgnore(false)
 
     // Base Config
@@ -107,6 +110,7 @@ module.exports = function(config) {
             input: 'src',
             output: 'dist',
             includes: 'includes',
+            layouts: 'layouts',
             data: 'data'
         },
         templateFormats: ['njk', 'md'],

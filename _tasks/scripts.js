@@ -17,7 +17,6 @@ const babelConfig = {
         }
     }
 }
-
 const webpackConfig = {
     entry: {
         main: `./${config.assetSrc}/scripts/main.js`,

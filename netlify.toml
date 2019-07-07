@@ -4,7 +4,8 @@
     functions = "functions"
 
 [build.environment]
-    NODE_VERSION = "8.9.4"
+    NODE_VERSION = "10.15"
+    YARN_VERSION = "1.16.0"
 
 [[headers]]
     for = "/*"
